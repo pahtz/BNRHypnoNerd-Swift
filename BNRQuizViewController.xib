@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6154.21" systemVersion="14A261i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BNRQuizViewController" customModule="BNRQuiz_Swift" customModuleProvider="target">
+            <connections>
+                <outlet property="answerLabel" destination="kV7-qs-VFG" id="1pH-xa-b7m"/>
+                <outlet property="questionLabel" destination="dak-vA-TYe" id="TOS-di-wVx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Question&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dak-vA-TYe">
+                    <rect key="frame" x="20" y="20" width="440" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azq-Lz-cZf">
+                    <rect key="frame" x="188" y="49" width="105" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.72192192799999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Show Question">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="showQuestion:" destination="-1" eventType="touchUpInside" id="uXc-mF-8EM"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kV7-qs-VFG">
+                    <rect key="frame" x="20" y="229" width="440" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvF-3F-ahu">
+                    <rect key="frame" x="193" y="258" width="94" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.72192192799999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Show Answer">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="showAnswer:" destination="-1" eventType="touchUpInside" id="kpk-Zl-cU0"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="dak-vA-TYe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" symbolic="YES" id="FEF-tr-NDW"/>
+                <constraint firstItem="AvF-3F-ahu" firstAttribute="centerX" secondItem="kV7-qs-VFG" secondAttribute="centerX" id="KOO-9X-q50"/>
+                <constraint firstItem="kV7-qs-VFG" firstAttribute="leading" secondItem="dak-vA-TYe" secondAttribute="leading" id="Z7B-wV-Uwn"/>
+                <constraint firstItem="kV7-qs-VFG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="229" id="dO6-d6-rpE"/>
+                <constraint firstItem="azq-Lz-cZf" firstAttribute="centerX" secondItem="dak-vA-TYe" secondAttribute="centerX" id="gUQ-bh-BCa"/>
+                <constraint firstItem="kV7-qs-VFG" firstAttribute="trailing" secondItem="dak-vA-TYe" secondAttribute="trailing" id="iQn-le-bia"/>
+                <constraint firstItem="azq-Lz-cZf" firstAttribute="top" secondItem="dak-vA-TYe" secondAttribute="bottom" constant="8" symbolic="YES" id="kaN-he-nnI"/>
+                <constraint firstItem="dak-vA-TYe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="kzs-wD-rBk"/>
+                <constraint firstItem="AvF-3F-ahu" firstAttribute="top" secondItem="kV7-qs-VFG" secondAttribute="bottom" constant="8" symbolic="YES" id="pXh-2R-sXA"/>
+                <constraint firstAttribute="trailing" secondItem="dak-vA-TYe" secondAttribute="trailing" constant="20" symbolic="YES" id="sN6-hd-GDl"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="AbstractSizeClassScreen[default]"/>
+            <point key="canvasLocation" x="278" y="356"/>
+        </view>
+    </objects>
+</document>

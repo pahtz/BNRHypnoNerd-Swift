@@ -17,6 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         // Override point for customization after application launch.
+        
+        var hvc = BNRHypnosisViewController()
+
+        //var appBundle = NSBundle.mainBundle()
+        //var rvc = BNRReminderViewController(nibName: "BNRReminderViewController", bundle: appBundle)
+        var rvc = BNRReminderViewController()
+        
+        var qvc = BNRQuizViewController()
+        
+        var tabBarController = UITabBarController()
+        tabBarController.viewControllers = [hvc, rvc, qvc]
+        
+        // Set root view controller and make windows visible
+        self.window!.rootViewController = tabBarController
+
         self.window!.backgroundColor = UIColor.whiteColor()
         self.window!.makeKeyAndVisible()
         return true
