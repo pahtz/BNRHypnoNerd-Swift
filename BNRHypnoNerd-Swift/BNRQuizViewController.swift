@@ -10,8 +10,8 @@ import UIKit
 
 class BNRQuizViewController: UIViewController {
     var currentQuestionIndex:Int = 0
-    var questions:String[]!
-    var answers:String[]!
+    var questions:[String]!
+    var answers:[String]!
     
     @IBOutlet var answerLabel: UILabel
     @IBOutlet var questionLabel: UILabel

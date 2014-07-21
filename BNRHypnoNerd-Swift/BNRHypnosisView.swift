@@ -29,12 +29,11 @@ class BNRHypnosisView: UIView {
         println("\(self) was touched")
         
         //Get 3 random numbers between 0 and 1
-        let red = Double(arc4random() % 100) / 100.0
-        let green = Double(arc4random() % 100) / 100.0
-        let blue = Double(arc4random() % 100) / 100.0
+        let red = CGFloat(Double(arc4random() % 100) / 100.0)
+        let green = CGFloat(Double(arc4random() % 100) / 100.0)
+        let blue = CGFloat(Double(arc4random() % 100) / 100.0)
         
         let randomColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
-        
         circleColor = randomColor
         
         if let segControl = self.subviews[0] as? UISegmentedControl
@@ -57,14 +56,14 @@ class BNRHypnosisView: UIView {
         center.y = bounds.origin.y + bounds.size.height / 2.0
         
         //The largest circle will circumscribe the view
-        let maxRadius : Double  = hypot(bounds.size.width, bounds.size.height) / 2.0
+        let maxRadius : CGFloat = hypot(bounds.size.width, bounds.size.height) / 2.0
     
 
         let path = UIBezierPath()
         
-        for var currentRadius = maxRadius; currentRadius > 0; currentRadius -= 20 {
+        for var currentRadius : CGFloat = maxRadius; currentRadius > 0; currentRadius -= 20 {
             path.moveToPoint(CGPointMake(center.x + currentRadius, center.y))   
-            path.addArcWithCenter(center, radius: currentRadius, startAngle: 0.0, endAngle: M_PI * 2.0, clockwise: true)
+            path.addArcWithCenter(center, radius: currentRadius, startAngle: 0.0, endAngle: CGFloat(M_PI * 2.0), clockwise: true)
             //Note this is currentRadius!
         }
         //Configure line width ot 10 points
@@ -101,8 +100,8 @@ class BNRHypnosisView: UIView {
         trianglePath.addClip()
         
         //Setup Gradient
-        let locations :CGFloat[] = [ 0.0, 1.0]
-        let components :CGFloat[] = [ 0.0, 1.0, 0.0, 1.0, //start color is green
+        let locations :[CGFloat] = [ 0.0, 1.0]
+        let components :[CGFloat] = [ 0.0, 1.0, 0.0, 1.0, //start color is green
                                     1.0, 1.0, 0.0, 1.0] //end color is yellow
         var colorspace : CGColorSpace = CGColorSpaceCreateDeviceRGB()
         var gradient : CGGradientRef = CGGradientCreateWithColorComponents(colorspace, components, locations, 2)

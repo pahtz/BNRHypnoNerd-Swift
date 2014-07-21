@@ -81,7 +81,7 @@ class BNRHypnosisViewController: UIViewController, UITextFieldDelegate {
     
     func drawHypnoticMessage(message : String)
     {
-        for _ in 1..20
+        for _ in 1..<20
         {
             var messageLabel = UILabel()
             
