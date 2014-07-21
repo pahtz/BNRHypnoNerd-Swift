@@ -9,38 +9,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BNRHypnoNerd-Swift/BNRHypnosisViewController.swift"
-            timestampString = "425300606.137097"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "loadView()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BNRHypnoNerd-Swift/BNRHypnosisViewController.swift"
-            timestampString = "425376314.477141"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "drawHypnoticMessage(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "BNRHypnoNerd-Swift/BNRHypnosisView.swift"
             timestampString = "425376904.935785"
             startingColumnNumber = "9223372036854775807"
@@ -75,6 +43,112 @@
             endingLineNumber = "104"
             landmarkName = "drawRect(_:)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BNRHypnoNerd-Swift/BNRHypnosisViewController.swift"
+            timestampString = "427612077.368518"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "drawHypnoticMessage(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BNRHypnoNerd_Swift.BNRHypnosisViewController.(drawHypnoticMessage (BNRHypnoNerd_Swift.BNRHypnosisViewController) -&gt; (Swift.String) -&gt; ()).(closure #2)"
+                  moduleName = "BNRHypnoNerd-Swift"
+                  urlString = "file:///Users/paul/GitHub/BNRHypnoNerd-Swift/BNRHypnoNerd-Swift/BNRHypnosisViewController.swift"
+                  timestampString = "427612077.431004"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "980">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BNRHypnoNerd_Swift.BNRHypnosisViewController.(drawHypnoticMessage (BNRHypnoNerd_Swift.BNRHypnosisViewController) -&gt; (Swift.String) -&gt; ()).(closure #2).(closure #2)"
+                  moduleName = "BNRHypnoNerd-Swift"
+                  urlString = "file:///Users/paul/GitHub/BNRHypnoNerd-Swift/BNRHypnoNerd-Swift/BNRHypnosisViewController.swift"
+                  timestampString = "427612077.431093"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "141"
+                  endingLineNumber = "141"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BNRHypnoNerd-Swift/BNRHypnosisViewController.swift"
+            timestampString = "427612077.368518"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "drawHypnoticMessage(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BNRHypnoNerd_Swift.BNRHypnosisViewController.drawHypnoticMessage (BNRHypnoNerd_Swift.BNRHypnosisViewController)(Swift.String) -&gt; ()"
+                  moduleName = "BNRHypnoNerd-Swift"
+                  urlString = "file:///Users/paul/GitHub/BNRHypnoNerd-Swift/BNRHypnoNerd-Swift/BNRHypnosisViewController.swift"
+                  timestampString = "427612077.431634"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "145"
+                  endingLineNumber = "145"
+                  offsetFromSymbolStart = "5408">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BNRHypnoNerd_Swift.BNRHypnosisViewController.(drawHypnoticMessage (BNRHypnoNerd_Swift.BNRHypnosisViewController) -&gt; (Swift.String) -&gt; ()).(closure #2)"
+                  moduleName = "BNRHypnoNerd-Swift"
+                  urlString = "file:///Users/paul/GitHub/BNRHypnoNerd-Swift/BNRHypnoNerd-Swift/BNRHypnosisViewController.swift"
+                  timestampString = "427612077.43175"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "145"
+                  endingLineNumber = "145"
+                  offsetFromSymbolStart = "1880">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reabstraction thunk helper from @callee_owned (@unowned Swift.Bool) -&gt; (@unowned ()) to @callee_owned (@in Swift.Bool) -&gt; (@out ())"
+                  moduleName = "BNRHypnoNerd-Swift"
+                  urlString = "file:///Users/paul/GitHub/BNRHypnoNerd-Swift/BNRHypnoNerd-Swift/BNRHypnosisViewController.swift"
+                  timestampString = "427612077.43184"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "145"
+                  endingLineNumber = "145"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -11,6 +11,7 @@ import UIKit
 class BNRHypnosisViewController: UIViewController, UITextFieldDelegate {
 
     var segmentedControl : UISegmentedControl!
+    var textField : UITextField?
     
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
@@ -46,17 +47,33 @@ class BNRHypnosisViewController: UIViewController, UITextFieldDelegate {
         
         //Create a text field
         let textFieldRect = CGRectMake(40, 70, 240, 30)
-        var textField = UITextField(frame: textFieldRect)
+        textField = UITextField(frame: textFieldRect)
         
         //Setting the border style on the text field will allow us to see it more easily
-        textField.borderStyle = UITextBorderStyle.RoundedRect
-        textField.placeholder = "Hypnotize me"
-        textField.returnKeyType = UIReturnKeyType.Done
-        textField.delegate = self
-        self.view.addSubview(textField)
+        textField!.borderStyle = UITextBorderStyle.RoundedRect
+        textField!.placeholder = "Hypnotize me"
+        textField!.returnKeyType = UIReturnKeyType.Done
+        textField!.delegate = self
+        self.view.addSubview(textField!)
         
         println("BNRHypnosisViewController loaded its view.")
     }
+    
+    override func viewDidAppear(animated: Bool)
+    {
+        super.viewDidAppear(animated)
+        UIView.animateWithDuration(2.0,
+            delay: 0.0,
+            usingSpringWithDamping: 0.25,
+            initialSpringVelocity: 0.0,
+            options: UIViewAnimationOptions.AllowUserInteraction,
+            animations: {
+                let frame = CGRectMake(40, 270, 240, 30)
+                self.textField!.frame = frame
+            },
+            completion: nil)
+
+     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool
     {
@@ -108,6 +125,25 @@ class BNRHypnosisViewController: UIViewController, UITextFieldDelegate {
             
             //Add the label to the hierarchy
             view.addSubview(messageLabel)
+            
+            //Set the label's intital alpha
+            messageLabel.alpha = 0.0
+            
+            //Animate the alpha to 1.0
+            //UIView.animateWithDuration(0.5, animations:{ messageLabel.alpha = 1.0 })
+            UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: { messageLabel.alpha = 1.0 }, completion: nil)
+            
+            UIView.animateKeyframesWithDuration(1.0, delay: 0.0, options: UIViewKeyframeAnimationOptions.AllowUserInteraction, animations: {
+                
+                UIView.addKeyframeWithRelativeStartTime(0, relativeDuration: 0.8, animations: { messageLabel.center = self.view.center })
+                
+                UIView.addKeyframeWithRelativeStartTime(0.8, relativeDuration: 0.2, animations: {
+                let x = CGFloat(arc4random_uniform(UInt32(width)))
+                let y = CGFloat(arc4random_uniform(UInt32(height)))
+                messageLabel.center = CGPointMake(x , y)})
+            
+                }, completion: {(finished: Bool) in
+                    println("Animation finished") })
             
             var motionEffect = UIInterpolatingMotionEffect(keyPath: "center.x", type: UIInterpolatingMotionEffectType.TiltAlongHorizontalAxis)
             motionEffect.minimumRelativeValue = -25
